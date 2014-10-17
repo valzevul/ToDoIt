@@ -111,12 +111,12 @@
                     <navigationItem key="navigationItem" title="Add Task" id="rg6-ZL-VmB">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aQ0-h0-tBm">
                             <connections>
-                                <segue destination="pGg-6v-bdr" kind="custom" customClass="DismissSegue" id="W0e-cX-ibA"/>
+                                <segue destination="pGg-6v-bdr" kind="custom" identifier="dismissAndCancel" customClass="DismissSegue" id="W0e-cX-ibA"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="LQ5-BD-KDs">
                             <connections>
-                                <segue destination="pGg-6v-bdr" kind="custom" customClass="DismissSegue" id="uJf-3r-eag"/>
+                                <segue destination="pGg-6v-bdr" kind="custom" identifier="dismissAndSave" customClass="DismissSegue" id="uJf-3r-eag"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -183,6 +183,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uJf-3r-eag"/>
+        <segue reference="W0e-cX-ibA"/>
     </inferredMetricsTieBreakers>
 </document>

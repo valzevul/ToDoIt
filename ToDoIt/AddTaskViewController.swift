@@ -18,6 +18,13 @@ class AddTaskViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "dismissAndSave" {
+            let task = Task(title: titleField.text, notes: notesField.text)
+            TaskStore.sharedInstance.add(task)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
