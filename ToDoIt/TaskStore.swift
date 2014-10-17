@@ -20,6 +20,10 @@ class TaskStore {
     
     var tasks: [Task] = []
     
+    var count: Int {
+        return tasks.count
+    }
+    
     func add(task: Task) {
         tasks.append(task)
     }
@@ -30,6 +34,10 @@ class TaskStore {
     
     func get(index: Int) -> Task {
         return tasks[index]
+    }
+    
+    func removeTaskAtIndex(index: Int) {
+        tasks.removeAtIndex(index)
     }
     
 }
