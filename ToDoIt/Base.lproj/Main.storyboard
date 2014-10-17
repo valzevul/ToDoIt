@@ -57,7 +57,7 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz">
+                    <navigationItem key="navigationItem" title="Tasks" id="tQt-TN-PWz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uxJ-co-chF">
                             <connections>
                                 <segue destination="xY9-8m-N7C" kind="presentation" identifier="showAddTask" id="jmx-fi-cr1"/>
@@ -112,6 +112,11 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aQ0-h0-tBm">
                             <connections>
                                 <segue destination="pGg-6v-bdr" kind="custom" customClass="DismissSegue" id="W0e-cX-ibA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="LQ5-BD-KDs">
+                            <connections>
+                                <segue destination="pGg-6v-bdr" kind="custom" customClass="DismissSegue" id="uJf-3r-eag"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -178,6 +183,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="W0e-cX-ibA"/>
+        <segue reference="uJf-3r-eag"/>
     </inferredMetricsTieBreakers>
 </document>
