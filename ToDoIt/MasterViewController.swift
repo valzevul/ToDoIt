@@ -53,6 +53,7 @@ class MasterViewController: UITableViewController {
 
         let task = TaskStore.sharedInstance.get(indexPath.row)
         cell.textLabel?.text = task.title
+        cell.detailTextLabel?.text = task.notes
         return cell
     }
 

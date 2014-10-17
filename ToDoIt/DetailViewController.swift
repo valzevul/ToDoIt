@@ -11,6 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var detailNotesLabel: UITextView!
 
 
     var detailItem: Task? {
@@ -25,6 +26,9 @@ class DetailViewController: UIViewController {
         if let detail: Task = self.detailItem {
             if let label = self.detailDescriptionLabel {
                 label.text = detail.title
+            }
+            if let notes = self.detailNotesLabel {
+                notes.text = detail.notes
             }
         }
     }
