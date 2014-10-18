@@ -11,6 +11,7 @@
 		820428EB19F12C0A001931E0 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820428EA19F12C0A001931E0 /* DismissSegue.swift */; };
 		820428ED19F12DE5001931E0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820428EC19F12DE5001931E0 /* Task.swift */; };
 		820428EF19F12E3D001931E0 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820428EE19F12E3D001931E0 /* TaskStore.swift */; };
+		820C141619F25A210023722A /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 820C141519F25A210023722A /* libc++.dylib */; };
 		82DDBE7019F0590E0091C043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DDBE6F19F0590E0091C043 /* AppDelegate.swift */; };
 		82DDBE7219F0590E0091C043 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DDBE7119F0590E0091C043 /* MasterViewController.swift */; };
 		82DDBE7419F0590E0091C043 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DDBE7319F0590E0091C043 /* DetailViewController.swift */; };
@@ -35,6 +36,7 @@
 		820428EA19F12C0A001931E0 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 		820428EC19F12DE5001931E0 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		820428EE19F12E3D001931E0 /* TaskStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
+		820C141519F25A210023722A /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		82DDBE6A19F0590E0091C043 /* ToDoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82DDBE6E19F0590E0091C043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82DDBE6F19F0590E0091C043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820C141619F25A210023722A /* libc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +72,7 @@
 		82DDBE6119F0590D0091C043 = {
 			isa = PBXGroup;
 			children = (
+				820C141519F25A210023722A /* libc++.dylib */,
 				82DDBE6C19F0590E0091C043 /* ToDoIt */,
 				82DDBE8419F0590E0091C043 /* ToDoItTests */,
 				82DDBE6B19F0590E0091C043 /* Products */,
@@ -356,6 +360,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ToDoIt",
+				);
 				INFOPLIST_FILE = ToDoIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -366,6 +374,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ToDoIt",
+				);
 				INFOPLIST_FILE = ToDoIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 Vadim Drobinin. All rights reserved.
 //
 
+//TODO: Realm as a database for entries
+//TODO: New design
+//TODO: Readme, docs, etc.
+
 import UIKit
 
 class MasterViewController: UITableViewController {

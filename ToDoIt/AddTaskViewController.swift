@@ -15,8 +15,23 @@ class AddTaskViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        titleField.layer.borderWidth = 1
+        notesField.layer.borderWidth = 1
+        
+        let color = 555555 // RGB(85,85,85)
+        var bColor: CGColor = colorize(color).CGColor! // border color of text fields
+        titleField.layer.borderColor = bColor
+        notesField.layer.borderColor = bColor
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func colorize(hex: Int, alpha: Double = 1.0) -> UIColor {
+        let red = Double((hex & 0xFF0000) >> 16) / 255.0
+        let green = Double((hex & 0xFF00) >> 8) / 255.0
+        let blue = Double((hex & 0xFF)) / 255.0
+        var color: UIColor = UIColor( red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha:CGFloat(alpha) )
+        return color
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
